@@ -3,13 +3,13 @@ on: push
 jobs:
   lint:
     runs-on: unbutu-latest
-      steps:
-        - name: Get code
-          uses: actions/checkout@v3
-        - name: Install dependencies
-          run: npm ci
-        - name: Lint
-          run: npm run lint
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
   test:
     runs-on: unbutu-latest
     steps:
@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Test code
-        run: npm run test  
+        run: npm run test
   deploy:
     runs-on: unbutu-latest
     steps:
