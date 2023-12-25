@@ -11,7 +11,7 @@ jobs:
       - name: Lint
         run: npm run lint
   test:
-    runs-on: unbutu-latest
+    runs-on: ubuntu-latest # Corrected typo in "ubuntu"
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - name: Test code
         run: npm run test
   deploy:
-    runs-on: unbutu-latest
+    runs-on: ubuntu-latest # Corrected typo in "ubuntu"
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -29,4 +29,4 @@ jobs:
       - name: Build code
         run: npm run build
       - name: Deploy code
-        run: echo "Deployingg..."
+        run: echo "Deploying..."
